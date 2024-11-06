@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
     public function index()
     {
-        return view('contact'); // Pastikan view 'contact' tersedia di resources/views
+        $contacts = Contact::all();
+        return view('contact.index', compact('contacts'));
     }
 }

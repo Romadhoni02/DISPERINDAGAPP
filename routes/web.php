@@ -17,5 +17,5 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
 Route::get('/contact', [ContactController::class, 'index']);
-Route::get('/market', [MarketController::class, 'index'])->name('market.index');
+Route::get('/market', [MarketController::class, 'index'])->middleware('auth')->name('market.index');
 Route::get('/news', [NewsController::class, 'index']);

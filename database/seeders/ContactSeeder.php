@@ -7,9 +7,6 @@ use App\Models\Contact;
 
 class ContactSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run()
     {
         Contact::create([
