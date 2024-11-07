@@ -103,19 +103,12 @@
         <h1 class="disperindag-title">DISPERINDAG</h1>
         <h2>Login</h2>
 
-        <form method="POST" action="{{ route('login') }}">
+        <form action="{{ route('login') }}" method="POST">
             @csrf
-            <div class="form-group">
-                <label for="email">Email</label> <!-- Mengubah label menjadi Email -->
-                <input type="email" name="email" id="email" placeholder="Email" required autofocus> <!-- Mengubah input menjadi email -->
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password" required>
-            </div>
-            
-            <button type="submit" class="btn-login">Sign in</button>
+            <!-- Input untuk email dan password -->
+            <input type="email" name="email" required>
+            <input type="password" name="password" required>
+            <button type="submit">Login</button>
         </form>
     </div>
 </body>
