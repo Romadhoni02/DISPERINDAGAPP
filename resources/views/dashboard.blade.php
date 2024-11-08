@@ -1,9 +1,15 @@
-<!-- resources/views/dashboard.blade.php -->
-@extends('layouts.app')
-
-@section('content')
-    <div class="container">
-        <h1>Welcome to Dashboard</h1>
-        <p>This is the main dashboard page.</p>
-    </div>
-@endsection
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Disperindag</title>
+</head>
+<body>
+    <h1>Selamat Datang di Dashboard</h1>
+    <p>Anda berhasil login!</p>
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>

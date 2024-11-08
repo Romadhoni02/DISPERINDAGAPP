@@ -11,10 +11,12 @@
         <a class="navbar-brand" href="{{ route('market.index') }}">Market</a>
         <a class="navbar-brand" href="{{ route('news.index') }}">News</a>
         <a class="navbar-brand" href="{{ route('contact.index') }}">Contact</a>
+        @auth
         <form action="{{ route('logout') }}" method="POST" class="ml-auto">
             @csrf
             <button class="btn btn-danger" type="submit">Logout</button>
         </form>
+        @endauth
     </nav>
 
     <div class="container mt-4">
